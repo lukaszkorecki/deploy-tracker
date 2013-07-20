@@ -1,3 +1,4 @@
+require 'sinatra/base'
 # add auth?
 class DeployTracker < Sinatra::Base
   get "/" do
