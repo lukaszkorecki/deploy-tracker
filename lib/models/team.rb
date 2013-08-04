@@ -1,9 +1,9 @@
-class Project
+class Team
   include ::DataMapper::Resource
+
   property :id, Serial
   property :name, String
-  property :team_id, Integer
 
-  belongs_to :team
-  has n, :events
+  has n, :actors
+  has n, :projects
 end
