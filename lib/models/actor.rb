@@ -8,4 +8,13 @@ class Actor
 
   belongs_to :team
   property :team_id, Integer
+
+  before :create do |actor|
+    actor.api_key = generate_api_key()
+  end
+
+
+  def generate_api_key
+    ::SecureRandom.uuid.gsub(/\W/,'')
+  end
 end
